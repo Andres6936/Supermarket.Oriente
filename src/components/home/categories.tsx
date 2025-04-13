@@ -1,7 +1,7 @@
 export const Categories = () => {
     return (
         <section
-            className="flex flex-row gap-4 items-center justify-around pt-3 mx-1 text-center bg-white border border-top-0 overflow-auto px-3">
+            className="flex flex-row gap-4 items-stretch justify-around pt-3 mx-1 text-center bg-white border border-top-0 overflow-auto px-3">
             {[
                 {src: "./img/item/8.jpg", title: "Breakfast & Dairy", items: "857 Items"},
                 {src: "./img/item/3.jpg", title: "Beverages", items: "65 Items"},
