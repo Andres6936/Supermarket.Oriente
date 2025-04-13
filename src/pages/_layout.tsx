@@ -1,26 +1,26 @@
 import '../styles.css';
 
-import type { ReactNode } from 'react';
-
-import { Header } from '../components/header';
-import { Footer } from '../components/footer.tsx';
+import type {ReactNode} from 'react';
 
 type RootLayoutProps = { children: ReactNode };
 
-export default async function RootLayout({ children }: RootLayoutProps) {
+export default async function RootLayout({children}: RootLayoutProps) {
     const data = await getData();
 
     return (
         <div className="font-['Nunito']">
-        <meta name="description" content={data.description} />
-    <link rel="icon" type="image/png" href={data.icon} />
-    <Header />
-    <main className="m-6 flex items-center *:min-h-64 *:min-w-64 lg:m-0 lg:min-h-svh lg:justify-center">
-        {children}
-        </main>
-        <Footer />
+            <meta name="description" content={data.description}/>
+            <link rel="icon" type="image/png" href={data.icon}/>
+            <link rel="stylesheet" href="/css/bootstrap.css"/>
+            <main className="container-fluid col-lg-7 mx-lg-auto">
+                {children}
+            </main>
+            <script src="/js/bootstrap.bundle.js"/>
+            <script>
+                let carousel = bootstrap.Carousel(document.getElementById('spo-carousel-slide'));
+            </script>
         </div>
-);
+    );
 }
 
 const getData = async () => {
