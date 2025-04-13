@@ -19,7 +19,7 @@ export const Categories = () => {
                             width="80"
                         />
                     </div>
-                    <div>
+                    <div className="flex flex-1 flex-col justify-between items-stretch">
                         <h6 className="h6 fw-bold small">{category.title}</h6>
                         <p className="text-muted small">{category.items}</p>
                     </div>
