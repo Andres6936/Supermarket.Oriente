@@ -1,6 +1,7 @@
 export const Categories = () => {
     return (
-        <section className="row row-cols-2 row-cols-sm-5 pt-3 mx-1 text-center bg-white border border-top-0">
+        <section
+            className="flex flex-row items-center justify-around pt-3 mx-1 text-center bg-white border border-top-0">
             {[
                 {src: "./img/item/8.jpg", title: "Breakfast & Dairy", items: "857 Items"},
                 {src: "./img/item/3.jpg", title: "Beverages", items: "65 Items"},
@@ -8,7 +9,7 @@ export const Categories = () => {
                 {src: "./img/item/9.jpg", title: "Biscuits, Snacks & Chocolates", items: "48 Items"},
                 {src: "./img/item/11.jpg", title: "Pet Care", items: "568 Items"}
             ].map((category, index) => (
-                <div className="col" key={index}>
+                <div className="flex flex-col items-center justify-center" key={index}>
                     <img
                         src={category.src}
                         alt="Item"
