@@ -26,32 +26,28 @@ export const TopProducts = () => {
             <div className="row row-cols-1 px-4 px-sm-0 row-cols-sm-4 bg-white">
                 {[1, 2, 3, 4].map((item, index) => (
                     <div className="col border" key={index}>
-                        <div className="row my-2">
-                            <div className="col">
-                                    <span
-                                        className="small border text-success border-success px-1"
-                                        style={{backgroundColor: "#f2fef2"}}
-                                    >
-                                        50% OFF
-                                    </span>
+                        <div className="flex flex-row items-center justify-between mt-2">
+                            <div
+                                className="small border text-success border-success px-1"
+                                style={{backgroundColor: "#f2fef2"}}
+                            >
+                                50% OFF
                             </div>
 
-                            <div className="col text-end">
-                                    <span
-                                        className={`small border ${
-                                            index % 2 === 0
-                                                ? "text-success border-success"
-                                                : "text-danger border-danger"
-                                        } px-1 my-auto`}
-                                        style={{
-                                            backgroundColor:
-                                                index % 2 === 0
-                                                    ? "#f2fef2"
-                                                    : "#FFEFF2"
-                                        }}
-                                    >
-                                        ●
-                                    </span>
+                            <div
+                                className={`small border aspect-square ${
+                                    index % 2 === 0
+                                        ? "text-success border-success"
+                                        : "text-danger border-danger"
+                                } px-1 my-auto`}
+                                style={{
+                                    backgroundColor:
+                                        index % 2 === 0
+                                            ? "#f2fef2"
+                                            : "#FFEFF2"
+                                }}
+                            >
+                                ●
                             </div>
                         </div>
                         <img

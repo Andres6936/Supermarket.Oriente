@@ -12,7 +12,7 @@ export default async function RootLayout({children}: RootLayoutProps) {
             <meta name="description" content={data.description}/>
             <link rel="icon" type="image/png" href={data.icon}/>
             <link rel="stylesheet" href="/css/bootstrap.css"/>
-            <main className="container-fluid col-lg-7 mx-lg-auto">
+            <main className="container mx-auto">
                 {children}
             </main>
             <script src="/js/bootstrap.bundle.js"/>
